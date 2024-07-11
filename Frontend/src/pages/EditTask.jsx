@@ -14,7 +14,7 @@ function EditTask() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/v1/get/task/${id}`, {
+      .get(`https://todo-backend-rose.vercel.app/api/v1/get/task/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -35,7 +35,7 @@ function EditTask() {
     const updatedStatus = e.target.value;
     axios
       .put(
-        `http://localhost:5000/api/v1/update/task/${task._id}`,
+        `https://todo-backend-rose.vercel.app/api/v1/update/task/${task._id}`,
         { status: updatedStatus },
         {
           headers: {
@@ -55,7 +55,7 @@ function EditTask() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:5000/api/v1/update/task/${id}`, task, {
+      .put(`https://todo-backend-rose.vercel.app/api/v1/update/task/${id}`, task, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
