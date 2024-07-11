@@ -11,7 +11,7 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-app.get("/",(req,res) => {
+app.get("/",(res) => {
     res.send("API is running!");
 });
 
@@ -24,7 +24,6 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
-
 
 app.listen(port, () => {
     console.log(`API is running on ${port}`);
