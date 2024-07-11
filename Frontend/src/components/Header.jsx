@@ -14,8 +14,8 @@ const Header = () => {
     try {
       localStorage.removeItem("token");
       localStorage.removeItem("username");
-        alert("Logout Successfull!");
-        navigate("/login");
+      alert("Logout Successfull!");
+      navigate("/login");
     } catch (error) {
       console.error("Logout error:", error);
     }
@@ -58,14 +58,14 @@ const Header = () => {
                           Create Task
                         </button>
                       </Link>
-                    <img
-                      src="/user.svg"
-                      alt="Avatar"
-                      className="w-12 h-12 rounded-full cursor-pointer"
-                      onClick={togglePopup}
-                    />
+                      <img
+                        src="/user.svg"
+                        alt="Avatar"
+                        className="w-12 h-12 rounded-full cursor-pointer"
+                        onClick={togglePopup}
+                      />
                     </div>
-                    
+
                     {isPopupOpen && (
                       <div className="absolute right-0 mt-2 w-64 bg-white text-black rounded-md shadow-lg z-10">
                         <div className="text-center my-4">
@@ -143,12 +143,12 @@ const Header = () => {
           <div className="md:hidden flex flex-col bg-white">
             <div className="py-4 space-y-6 flex flex-col justify-center items-center">
               <Link to="/login">
-                <button className="text-purple-950 bg-bg-transparent hover:text-white hover:bg-purple-900 border-[1px] border-purple-900 hover:border-[1px] hover:border-purple-900 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2 mr-2 ">
+                <button className="text-blue-600 bg-bg-transparent hover:text-white hover:bg-blue-700 border-[1px] border-blue-500 hover:border-[1px] hover:border-blue-700 font-semibold rounded-md px-5 lg:px-7 py-3 lg:py-2.5 mr-2 ">
                   Sign in
                 </button>
               </Link>
               <Link to="/register">
-                <button className=" text-white bg-purple-900 border-[1px] border-purple-900 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2 mr-2 ">
+                <button className=" text-white bg-blue-500 hover:bg-blue-700 border-[1px] border-blue-500 font-medium rounded-md px-5 lg:px-7 py-3 lg:py-2.5 mr-2 ">
                   Create an account
                 </button>
               </Link>
