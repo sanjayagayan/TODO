@@ -64,22 +64,22 @@ function Home() {
   return (
     <>
       <main className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-20">
-        <div className="w-full bg-white my-16">
+        <div className="w-full bg-white my-10 sm:my-16">
           <div className="text-center flex justify-center items-center space-x-3">
             <Lottie
               animationData={TaskAnimate}
               loop={true}
-              className="h-[200px] sm:h-[300px] "
+              className="h-[230px] sm:h-[300px] "
             />
             <div className="flex flex-col text-6xl sm:text-8xl font-bold">
               <h1 className=" text-blue-600">TO</h1>
               <h1 className=" text-red-500">DO</h1>
             </div>
           </div>
-          <div className="pb-3 sm:pb-8">
+          <div className="pb-3 sm:pb-8 w-full px-0 md:px-[60px] lg:px-[150px]">
             <input
               type="text"
-              placeholder="Search Tasks... (title,status,date)"
+              placeholder="Search Tasks..."
               className="p-4 border rounded w-full mb-8 focus:outline-none"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}

@@ -35,7 +35,7 @@ const Header = () => {
       <header className="bg-white text-black border-b-[1px] border-black/10 z-10">
         <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-20">
           <div className="flex justify-between items-center py-3 sm:py-6">
-            <div className=" flex-shrink-0 items-center">
+            <div className="flex-shrink-0 items-center">
               <Link to="/">
                 <div className="flex items-center">
                   <p className=" flex text-[35px] font-black hover:text-blue-600">
@@ -140,20 +140,19 @@ const Header = () => {
 
       <header className="text-white">
         {menuOpen && (
-          <div className="md:hidden flex flex-col bg-white">
-            <div className="py-4 space-y-6 flex flex-col justify-center items-center w-full">
+          <div className="md:hidden flex bg-white justify-center px-10 py-2">
+            <div className="py-4 space-y-6 flex flex-col justify-center items-center w-full mt-4">
               <Link to="/login">
-                <button className="text-blue-600 bg-bg-transparent hover:text-white hover:bg-blue-700 border-[1px] border-blue-500 hover:border-[1px] hover:border-blue-700 font-semibold rounded-md px-5 lg:px-7 py-3 lg:py-2.5 mr-2 ">
+                <button className="text-blue-600 w-[280px] bg-bg-transparent hover:text-white hover:bg-blue-700 border-[1px] border-blue-500 hover:border-[1px] hover:border-blue-700 font-semibold rounded-md px-7 py-3.5">
                   Sign in
                 </button>
               </Link>
               <Link to="/register">
-                <button className=" text-white bg-blue-500 hover:bg-blue-700 border-[1px] border-blue-500 font-medium rounded-md px-5 lg:px-7 py-3 lg:py-2.5 mr-2 ">
+                <button className=" text-white w-[280px] bg-blue-500 hover:bg-blue-700 border-[1px] border-blue-500 font-medium rounded-md px-7 py-3.5">
                   Create an account
                 </button>
               </Link>
             </div>
-            <div className="px-5 py-4 flex justify-around"></div>
           </div>
         )}
       </header>

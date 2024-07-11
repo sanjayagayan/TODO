@@ -44,8 +44,8 @@ function UserLogin() {
   return (
     <>
       <div className="flex items-center justify-center bg-cover">
-        <div className=" bg-white w-full h-auto py-16">
-          <div className="relative mx-auto w-full max-w-sm bg-white py-6 pb-8 ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
+        <div className=" bg-white w-full h-auto py-16 px-6">
+          <div className="relative mx-auto w-full max-w-sm bg-white py-6 pb-8 rounded-xl sm:rounded-xl px-6 border-[1px] border-black/10 sm:px-10">
             <div className="w-full">
               <div className="text-center">
                 <h1 className="text-3xl font-semibold text-gray-900">
