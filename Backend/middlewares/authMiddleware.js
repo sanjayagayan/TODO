@@ -1,5 +1,7 @@
 import jwt from "jsonwebtoken";
 import authModel from "../models/authModel.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const checkIsUserAuthenticated = async ( req,res,next) => {
     let token;
@@ -8,7 +10,7 @@ const checkIsUserAuthenticated = async ( req,res,next) => {
         try {
             token = authorization.split(" ")[1];
             // verify token
-            const {userID} = jwt.verify(token, "developedbysanjaya");
+            const {userID} = jwt.verify(token, process.env.JWT_SECRET);
             // get user from token
             req.user = await authModel.findById(userID).select("--password");
             next();
