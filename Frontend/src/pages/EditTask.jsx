@@ -14,7 +14,7 @@ function EditTask() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/v1/get/task/${id}`, {
+      .get(`https://todo-backend-rose.vercel.app/api/v1/get/task/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
