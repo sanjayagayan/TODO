@@ -14,10 +14,8 @@ const Header = () => {
     try {
       localStorage.removeItem("token");
       localStorage.removeItem("username");
-      setTimeout(() => {
         alert("Logout Successfull!");
         navigate("/login");
-      }, 1000);
     } catch (error) {
       console.error("Logout error:", error);
     }

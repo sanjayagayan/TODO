@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Lottie from 'lottie-react';
-import TaskAnimate from '../assets/taskAnimate.json';
-import NotFoundAnimate from '../assets/notFound.json';
+import Lottie from "lottie-react";
+import TaskAnimate from "../assets/taskAnimate.json";
+import NotFoundAnimate from "../assets/notFound.json";
 
 function Home() {
   const [tasks, setTasks] = useState([]);
@@ -66,7 +66,11 @@ function Home() {
       <main className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-20">
         <div className="w-full bg-white my-16">
           <div className="text-center flex justify-center items-center space-x-3">
-            <Lottie animationData={TaskAnimate} loop={true} className="h-[200px] sm:h-[300px] "/>
+            <Lottie
+              animationData={TaskAnimate}
+              loop={true}
+              className="h-[200px] sm:h-[300px] "
+            />
             <div className="flex flex-col text-6xl sm:text-8xl font-bold">
               <h1 className=" text-blue-600">TO</h1>
               <h1 className=" text-red-500">DO</h1>
@@ -131,8 +135,14 @@ function Home() {
               ))
             ) : (
               <div className="col-span-full text-center flex flex-col justify-center items-center py-4">
-                <Lottie animationData={NotFoundAnimate} loop={true} className="h-[120px]"/>
-                <h2 className="text-2xl font-bold text-gray-700 mt-[-20px] ml-2">No tasks found!</h2>
+                <Lottie
+                  animationData={NotFoundAnimate}
+                  loop={true}
+                  className="h-[120px]"
+                />
+                <h2 className="text-2xl font-bold text-gray-700 mt-[-20px] ml-2">
+                  No tasks found!
+                </h2>
               </div>
             )}
           </div>

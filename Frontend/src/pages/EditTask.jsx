@@ -35,7 +35,7 @@ function EditTask() {
     const updatedStatus = e.target.value;
     axios
       .put(
-        `https://todo-backend-rose.vercel.app/api/v1/update/task/${task._id}`,
+        `http://localhost:5000/api/v1/update/task/${task._id}`,
         { status: updatedStatus },
         {
           headers: {
@@ -55,7 +55,7 @@ function EditTask() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`https://todo-backend-rose.vercel.app/api/v1/update/task/${id}`, task, {
+      .put(`http://localhost:5000/api/v1/update/task/${id}`, task, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -108,42 +108,42 @@ function EditTask() {
             ></textarea>
           </div>
           <div className="flex w-full mb-4 px-4 gap-x-2">
-            <div className="w-[50%]" >
-                <label
+            <div className="w-[50%]">
+              <label
                 htmlFor="dueDate"
                 className="block text-sm font-medium text-gray-700"
-                >
+              >
                 Due Date
-                </label>
-                <input
+              </label>
+              <input
                 type="date"
                 name="dueDate"
                 value={task.dueDate.split("T")[0]}
                 onChange={handleChange}
                 required
                 className="mt-2 px-3 py-2.5 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none"
-                />
+              />
             </div>
-            <div className="w-[50%]" >
-                <label
+            <div className="w-[50%]">
+              <label
                 htmlFor="status"
                 className="block text-sm font-medium text-gray-700"
-                >
+              >
                 Status
-                </label>
-                <select
+              </label>
+              <select
                 name="status"
                 value={task.status}
                 onChange={handleChangeStatus}
                 required
                 className="mt-2 px-3 py-2.5 mr-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none"
-                >
+              >
                 <option value="pending">Pending</option>
                 <option value="completed">Completed</option>
-                </select>
+              </select>
             </div>
           </div>
-          
+
           <div className="mt-6 mb-4 space-y-4 px-4">
             <button
               type="submit"

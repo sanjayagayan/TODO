@@ -12,7 +12,6 @@ function AddTask() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTask = { title, description, dueDate, status };
-
     axios
       .post("http://localhost:5000/api/v1/add/task", newTask, {
         headers: {
@@ -65,40 +64,40 @@ function AddTask() {
             ></textarea>
           </div>
           <div className="flex w-full mb-4 px-4 gap-x-2">
-          <div className="w-[50%]">
-            <label
-              htmlFor="dueDate"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Due Date
-            </label>
-            <input
-              type="date"
-              value={dueDate}
-              onChange={(e) => setDueDate(e.target.value)}
-              required
-              className="mt-2 px-3 py-2.5 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none "
-            />
-          </div>
             <div className="w-[50%]">
-                <label
+              <label
+                htmlFor="dueDate"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Due Date
+              </label>
+              <input
+                type="date"
+                value={dueDate}
+                onChange={(e) => setDueDate(e.target.value)}
+                required
+                className="mt-2 px-3 py-2.5 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none "
+              />
+            </div>
+            <div className="w-[50%]">
+              <label
                 htmlFor="status"
                 className="block text-sm font-medium text-gray-700"
-                >
+              >
                 Status
-                </label>
-                <select
+              </label>
+              <select
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
                 required
                 className="mt-2 px-3 py-2.5 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none"
-                >
+              >
                 <option value="pending">Pending</option>
                 <option value="completed">Completed</option>
-                </select>
+              </select>
             </div>
           </div>
-          
+
           <div className="mt-6 mb-4 space-y-4 px-4">
             <button
               type="submit"

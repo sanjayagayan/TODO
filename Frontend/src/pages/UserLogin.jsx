@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { IoEye,IoEyeOff } from "react-icons/io5";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 
 function UserLogin() {
   const navigate = useNavigate();
@@ -21,7 +21,9 @@ function UserLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     if (!validatePassword(input.password)) {
-      alert("Password must be at least 8 characters long, contain at least one number, one uppercase and one lowercase letter.");
+      alert(
+        "Password must be at least 8 characters long, contain at least one number, one uppercase and one lowercase letter."
+      );
       return;
     }
     try {
@@ -103,11 +105,7 @@ function UserLogin() {
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500"
                     >
-                      {showPassword ? (
-                        <IoEye />
-                      ) : (
-                        <IoEyeOff />
-                      )}
+                      {showPassword ? <IoEye /> : <IoEyeOff />}
                     </span>
                   </div>
                   <div className="my-6">
@@ -120,7 +118,7 @@ function UserLogin() {
                   </div>
                   <div className="flex space-x-2 items-center">
                     <p className="text-center text-sm text-gray-500">
-                       Don&apos;t have an account yet?
+                      Don&apos;t have an account yet?
                     </p>
                     <Link to="/register">
                       {" "}

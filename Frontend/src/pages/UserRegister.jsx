@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { IoEye,IoEyeOff } from "react-icons/io5";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 
 function UserRegister() {
   const navigate = useNavigate();
@@ -21,7 +21,9 @@ function UserRegister() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validatePassword(input.password)) {
-      alert("Password must be at least 8 characters long, contain at least one number, one uppercase and one lowercase letter.");
+      alert(
+        "Password must be at least 8 characters long, contain at least one number, one uppercase and one lowercase letter."
+      );
       return;
     }
     try {
@@ -29,11 +31,8 @@ function UserRegister() {
         "http://localhost:5000/api/v1/user/register",
         input
       );
-
-      setTimeout(() => {
-        alert(res.data.message);
-        navigate("/login");
-      }, 1000);
+      alert(res.data.message);
+      navigate("/login");
     } catch (error) {
       alert(error.response.data.message);
     }
@@ -126,11 +125,7 @@ function UserRegister() {
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500"
                     >
-                      {showPassword ? (
-                        <IoEye />
-                      ) : (
-                        <IoEyeOff />
-                      )}
+                      {showPassword ? <IoEye /> : <IoEyeOff />}
                     </span>
                   </div>
                   <div className="my-6">
