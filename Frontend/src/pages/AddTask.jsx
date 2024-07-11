@@ -14,7 +14,7 @@ function AddTask() {
     const newTask = { title, description, dueDate, status };
 
     axios
-      .post("https://todo-backend-rose.vercel.app/api/v1/add/task", newTask, {
+      .post("https://todo-backend-3th102sss-sanjayagayans-projects.vercel.app/api/v1/add/task", newTask, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
