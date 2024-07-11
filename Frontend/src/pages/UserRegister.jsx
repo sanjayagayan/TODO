@@ -28,7 +28,7 @@ function UserRegister() {
     }
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/v1/user/register",
+        "https://todo-backend-rose.vercel.app/api/v1/user/register",
         input
       );
       alert(res.data.message);

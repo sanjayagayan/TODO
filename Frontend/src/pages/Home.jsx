@@ -11,7 +11,7 @@ function Home() {
 
   useEffect(() => {
     const getAllTasks = async () => {
-      const res = await axios.get("http://localhost:5000/api/v1/get/alltasks", {
+      const res = await axios.get("https://todo-backend-rose.vercel.app/api/v1/get/alltasks", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -35,7 +35,7 @@ function Home() {
     if (window.confirm(confirmMessage)) {
       try {
         await axios.put(
-          `http://localhost:5000/api/v1/update/task/${task._id}`,
+          `https://todo-backend-rose.vercel.app/api/v1/update/task/${task._id}`,
           updatedTask,
           {
             headers: {
