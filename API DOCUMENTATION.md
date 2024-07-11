@@ -22,15 +22,45 @@ Welcome to the Authentication and Task Management API! This API provides endpoin
 
 **Endpoint:** `POST /api/v1/user/register`
 
-**Example Request & Response:**
+**Example Request:**
 ```json
 {
-  "username": "exampleUser",
-  "email": "user@example.com",
-  "password": "password123"
+  "username": "user",
+  "email": "user@gmail.com",
+  "password": "password"  //Password must be at least 8 characters long, contain at least one number, one uppercase and one lowercase letter. 
 }
-
+```
+**Response:**
+```json
 {
     "message": "User registered successfully"
 }
+```
+
+### Login
+
+**Endpoint:** `POST /api/v1/user/register`
+
+**Example Request:**
+```json
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+```
+**Response:**
+```json
+{
+    "token": "JWT Token",
+    "user": {
+        "id": "userId",
+        "username": "exampleUser",
+        "email": "user@example.com"
+    }
+}
+```
+
+
+
+
 
