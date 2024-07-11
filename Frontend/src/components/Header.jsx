@@ -139,22 +139,65 @@ const Header = () => {
       </header>
 
       <header className="text-white">
-        {menuOpen && (
-          <div className="md:hidden flex bg-white justify-center px-10 py-2">
-            <div className="py-4 space-y-6 flex flex-col justify-center items-center w-full mt-4">
-              <Link to="/login">
-                <button className="text-blue-600 w-[280px] bg-bg-transparent hover:text-white hover:bg-blue-700 border-[1px] border-blue-500 hover:border-[1px] hover:border-blue-700 font-semibold rounded-md px-7 py-3.5">
-                  Sign in
-                </button>
-              </Link>
-              <Link to="/register">
-                <button className=" text-white w-[280px] bg-blue-500 hover:bg-blue-700 border-[1px] border-blue-500 font-medium rounded-md px-7 py-3.5">
-                  Create an account
-                </button>
-              </Link>
+        {token && username ? (
+          <>
+             {menuOpen &&
+                <div className="md:hidden w-full bg-white text-black mt-4">
+                  <div className="text-center">
+                    <img
+                      className="h-32 w-32 md:h-20 md:w-20 rounded-full border-4 border-purple mx-auto"
+                      src="/user.svg"
+                      alt="Avatar"
+                    />
+                    <div className="my-4">
+                      <h3 className="font-bold text-3xl md:text-xl text-black">
+                        {username}
+                      </h3>
+                        <p className="text-[20px] md:text-sm lowercase pt-2">
+                          {username}@gmail.com
+                        </p>
+                    </div>
+                  </div>
+                  <div className="flex w-full flex-row justify-center items-center px-8 space-x-4 ">
+                    <button
+                      className="w-1/2 text-center p-3 border-[1px] border-black/30 rounded-md hover:bg-gray-100"
+                      onClick={addTask}
+                    >
+                      Add a New Task
+                    </button>
+
+                    <button
+                      className="w-1/2 text-center p-3 border-[1px] border-black/30 rounded-md hover:bg-gray-100"
+                      onClick={handleLogout}
+                    >
+                      Log Out
+                    </button>
+                  </div>
+              </div>
+             }
+          </>
+          
+        ) : (
+          <>
+            {menuOpen && (
+            <div className="md:hidden flex bg-white justify-center px-10 py-2">
+              <div className="py-4 space-y-6 flex flex-col justify-center items-center w-full mt-4">
+                <Link to="/login">
+                  <button className="text-blue-600 w-[280px] bg-bg-transparent hover:text-white hover:bg-blue-700 border-[1px] border-blue-500 hover:border-[1px] hover:border-blue-700 font-semibold rounded-md px-7 py-3.5">
+                    Sign in
+                  </button>
+                </Link>
+                <Link to="/register">
+                  <button className=" text-white w-[280px] bg-blue-500 hover:bg-blue-700 border-[1px] border-blue-500 font-medium rounded-md px-7 py-3.5">
+                    Create an account
+                  </button>
+                </Link>
+              </div>
             </div>
-          </div>
+          )}
+          </>
         )}
+        
       </header>
     </>
   );

@@ -80,7 +80,7 @@ function Home() {
             <input
               type="text"
               placeholder="Search Tasks..."
-              className="p-4 border rounded w-full mb-8 focus:outline-none"
+              className="p-4 border rounded w-full mb-4 focus:outline-none"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
