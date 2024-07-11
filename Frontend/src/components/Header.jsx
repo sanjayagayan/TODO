@@ -141,14 +141,14 @@ const Header = () => {
       <header className="text-white">
         {menuOpen && (
           <div className="md:hidden flex flex-col bg-white">
-            <div className="py-4 space-y-6 flex flex-col justify-center items-center">
+            <div className="py-4 space-y-6 flex flex-col justify-center items-center w-full">
               <Link to="/login">
-                <button className="text-purple-950 bg-bg-transparent hover:text-white hover:bg-purple-900 border-[1px] border-purple-900 hover:border-[1px] hover:border-purple-900 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2 mr-2 ">
+                <button className="text-blue-600 bg-bg-transparent hover:text-white hover:bg-blue-700 border-[1px] border-blue-500 hover:border-[1px] hover:border-blue-700 font-semibold rounded-md px-5 lg:px-7 py-3 lg:py-2.5 mr-2 ">
                   Sign in
                 </button>
               </Link>
               <Link to="/register">
-                <button className=" text-white bg-purple-900 border-[1px] border-purple-900 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2 mr-2 ">
+                <button className=" text-white bg-blue-500 hover:bg-blue-700 border-[1px] border-blue-500 font-medium rounded-md px-5 lg:px-7 py-3 lg:py-2.5 mr-2 ">
                   Create an account
                 </button>
               </Link>
