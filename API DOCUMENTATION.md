@@ -46,8 +46,8 @@ Welcome to the Authentication and Task Management API! This API provides endpoin
 **Example Request:**
 ```json
 {
-  "email": "user@example.com",
-  "password": "password123"
+  "email": "user@gmail.com",
+  "password": "password"
 }
 ```
 **Response:**
@@ -56,8 +56,8 @@ Welcome to the Authentication and Task Management API! This API provides endpoin
     "token": "JWT Token",
     "user": {
         "id": "userId",
-        "username": "exampleUser",
-        "email": "user@example.com"
+        "username": "username",
+        "email": "user@gmail.com"
     }
 }
 ```
