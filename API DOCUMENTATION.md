@@ -76,6 +76,7 @@ Welcome to the Authentication and Task Management API! This API provides endpoin
     "status": "pending"
 }
 ```
+**Response:**
 ```json
 {
     "message": "Task created successfully",
@@ -93,7 +94,7 @@ Welcome to the Authentication and Task Management API! This API provides endpoin
 ### Get All Tasks
 **Endpoint:** `GET /api/tasks`
 
-**Response**
+**Response:**
 ```json
 [
     {
@@ -111,7 +112,7 @@ Welcome to the Authentication and Task Management API! This API provides endpoin
 ### Get Task by ID
 **Endpoint:** `GET /api/tasks/:id`
 
-**Response**
+**Response:**
 ```json
 {
     "id": "taskId",
@@ -134,6 +135,7 @@ Welcome to the Authentication and Task Management API! This API provides endpoin
     "status": "completed"
 }
 ```
+**Response:**
 ```json
 {
     "message": "Task updated successfully",
