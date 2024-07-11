@@ -13,7 +13,6 @@ function UserLogin() {
   const [showPassword, setShowPassword] = useState(false);
 
   const validatePassword = (password) => {
-    // Example regex: at least one number, one uppercase and lowercase letter, and at least 8 characters
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
     return regex.test(password);
   };
