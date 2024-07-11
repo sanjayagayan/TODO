@@ -10,7 +10,7 @@ function SingleTaskDetail() {
   useEffect(() => {
     const getSingleTask = async () => {
       const res = await axios.get(
-        `https://todo-backend-rose.vercel.app/api/v1/get/task/${id}`,
+        `http://localhost:5000/api/v1/get/task/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -30,7 +30,7 @@ function SingleTaskDetail() {
     };
     axios
       .put(
-        `https://todo-backend-rose.vercel.app/api/v1/update/task/${task._id}`,
+        `http://localhost:5000/api/v1/update/task/${task._id}`,
         updatedTask,
         {
           headers: {
@@ -47,7 +47,7 @@ function SingleTaskDetail() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`https://todo-backend-rose.vercel.app/api/v1/delete/task/${id}`, {
+      .delete(`http://localhost:5000/api/v1/delete/task/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

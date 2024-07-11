@@ -46,7 +46,7 @@ class AuthController
                     if(isEmail){
                         if(isEmail.email === email && await bcryptjs.compare(password, isEmail.password)){
                             // Generate Token
-                            const token = jwt.sign({ userID: isEmail._id},"developedbysanjaya",{expiresIn: "1d"});
+                            const token = jwt.sign({ userID: isEmail._id},process.env.JWT_SECRET,{expiresIn: "1d"});
                             return res.status(200).json({
                                 message: "Login Successfully!",
                                 token,
