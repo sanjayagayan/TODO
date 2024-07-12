@@ -145,7 +145,7 @@ const Header = () => {
                 <div className="md:hidden w-full bg-white text-black mt-4">
                   <div className="text-center">
                     <img
-                      className="h-32 w-32 md:h-20 md:w-20 rounded-full border-4 border-purple mx-auto"
+                      className="h-32 w-32 rounded-full mx-auto"
                       src="/user.svg"
                       alt="Avatar"
                     />
