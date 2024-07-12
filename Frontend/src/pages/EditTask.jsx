@@ -68,7 +68,7 @@ function EditTask() {
   };
 
   return (
-    <div className="flex items-center justify-center bg-white my-20 px-10 sm:px-12">
+    <div className="flex items-center justify-center bg-white my-20 px-8 sm:px-12">
       <div className="w-full max-w-lg shadow-lg rounded-lg overflow-hidden ">
         <div className="mb-8">
           <div className="bg-blue-600 text-white py-4 text-center px-4 rounded-t-lg">
