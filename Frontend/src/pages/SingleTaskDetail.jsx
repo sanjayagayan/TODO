@@ -61,7 +61,7 @@ function SingleTaskDetail() {
 
   return (
     <div className="my-20 flex items-center justify-center bg-white px-10 sm:px-20">
-      <div className="w-full max-w-lg bg-white shadow-lg rounded-lg overflow-hidden ">
+      <div className="w-full max-w-lg shadow-lg rounded-lg overflow-hidden ">
         <div className="bg-blue-600 text-white text-center py-4">
           <h1 className="text-4xl font-bold">{task.title}</h1>
         </div>
