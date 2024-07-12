@@ -33,7 +33,7 @@ function UserLogin() {
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("username", res.data.name);
-      alert("Login successfully!");
+      alert("User Login successfully!");
       navigate("/");
     } catch (error) {
       alert(error.response.data.message);
