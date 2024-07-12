@@ -149,7 +149,7 @@ const Header = () => {
                       src="/user.svg"
                       alt="Avatar"
                     />
-                    <div className="my-4">
+                    <div className="my-2">
                       <h3 className="font-bold text-3xl md:text-xl text-black">
                         {username}
                       </h3>
